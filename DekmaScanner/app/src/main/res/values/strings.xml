@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">DekmaScanner</string>
+    <string name="title_activity_login">Login</string>
+    <string name="userName">UserName</string>
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
+    <string name="hint_userName">UserName</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_link_to_register">Not a member? Get registered in Firebase now!</string>
+    <string name="btn_link_to_login">Already registered. Login Me!</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="btn_forgot_password">Forgot your password?</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="err_msg_email">Enter valid username</string>
+    <string name="err_msg_password">Enter the password</string>
+    <string name="err_msg_useraname_password">Enter valid username or password</string>
+    <string name="title_activity_nevigation">NevigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="qr_scann">Scan QR</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menu_navigation">MenuNavigationActivity</string>
+
+    <!--Success Dialog-->
+    <string name="success_title">Oh Yeah!!</string>
+    <string name="success_message">Whatever you did, it was a huge success =D.</string>
+    <string name="success_button_text">OK, Cool</string>
+    <string name="content_description_base_dialog_icon">Imagem do Diálogo</string>
+
+    <!--Error Dialog-->
+    <string name="error_title">Oh snap :/</string>
+    <string name="error_message">Something went terribly wrong\n(probably my fault)</string>
+    <string name="error_button_text">OK, no problem</string>
+</resources>
