@@ -17,6 +17,25 @@ public class DownloadedDataCenter {
     private String token;
     private String tokenType;
     private String lectId;
+    private String centerName;
+
+    public String getCenterName() {
+        return centerName;
+    }
+
+    public void setCenterName(String centerName) {
+        this.centerName = centerName;
+    }
+
+    public String getLectureName() {
+        return lectureName;
+    }
+
+    public void setLectureName(String lectureName) {
+        this.lectureName = lectureName;
+    }
+
+    private String lectureName;
 
     public String getUserName() {
         return userName;

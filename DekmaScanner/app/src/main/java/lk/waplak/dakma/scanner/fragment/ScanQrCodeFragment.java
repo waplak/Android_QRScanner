@@ -132,12 +132,13 @@ public class ScanQrCodeFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedLect = lectCode.get(position);
-
+                DownloadedDataCenter.getInstance(getActivity()).setLectureName(lectName.get(position));
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 selectedLect = lectCode.get(0);
+                DownloadedDataCenter.getInstance(getActivity()).setLectureName(lectName.get(0));
             }
         });
         final ArrayList<String> courseName =new ArrayList<>();
@@ -178,12 +179,13 @@ public class ScanQrCodeFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedCenter = centerCode.get(position);
-
+                DownloadedDataCenter.getInstance(getActivity()).setCenterName(centerName.get(position));
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 selectedCenter = centerCode.get(0);
+                DownloadedDataCenter.getInstance(getActivity()).setCenterName(centerName.get(0));
             }
         });
     }

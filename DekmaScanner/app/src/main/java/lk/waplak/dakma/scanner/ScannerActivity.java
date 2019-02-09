@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -55,6 +56,8 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
     private int selecdedFeeType;
     private ProgressDialog dialog ;
     DecimalFormat df = new DecimalFormat("#,###,###,###.00");
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,8 +73,29 @@ public class ScannerActivity extends AppCompatActivity implements ZXingScannerVi
 
             }
         }
-
+        this.setTitle("Center: "+DownloadedDataCenter.getInstance(ScannerActivity.this).getCenterName()+"\n"+"Lecture: "+
+                DownloadedDataCenter.getInstance(ScannerActivity.this).getLectureName());
     }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
+
     private boolean checkPermission() {
         return ( ContextCompat.checkSelfPermission(getApplicationContext(), CAMERA ) == PackageManager.PERMISSION_GRANTED);
     }

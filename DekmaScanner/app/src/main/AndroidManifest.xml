@@ -40,8 +40,7 @@
         <activity
             android:name=".scanner.ScannerActivity"
             android:label="@string/qr_scann"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
